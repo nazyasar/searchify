@@ -8,6 +8,7 @@ import {
   Card,
 } from "react-bootstrap";
 import { useState, useEffect } from "react";
+import "./styles.css";
 
 const CLIENT_ID = process.env.REACT_APP_SPOTIFY_CLIENT_ID;
 const CLIENT_SECRET = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET;
@@ -79,10 +80,11 @@ function App() {
 
   return (
     <div className="App">
+      <h1 className="title">Search your artist!</h1>
       <Container>
-        <InputGroup className="mb-3" size="lg">
+        <InputGroup className="search" size="lg">
           <FormControl
-            placeholder="Search for artist"
+            placeholder="Type here"
             type="input"
             onKeyPress={(event) => {
               if (event.key == "Enter") {
@@ -95,11 +97,11 @@ function App() {
         </InputGroup>
       </Container>
       <Container>
-        <Row className="mx-2 row row-cols-4">
+        <Row className="row row-cols-4">
           {albums.map((album, i) => {
             return (
-              <Card key={album.id}>
-                <Card.Img src={album.images[0].url} />
+              <Card className="card" key={album.id}>
+                <Card.Img className="album-img" src={album.images[0].url} />
                 <Card.Body>
                   <Card.Title>{album.name}</Card.Title>
                 </Card.Body>

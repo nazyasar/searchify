@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+body {
+  font-family: "Bangers", cursive;
+  background-color: #fd7cc1; /* Pink background */
+}
+
+.btn {
+  background-color: #4b0082; /* Indigo button background */
+  color: #ffffff; /* White text color */
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #842ac5;
+}
+
+.search {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.title {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.card {
+  margin: 10px 10px;
+  width: 240px;
+}
+
+.album-img {
+    margin-top: 10px;
+    width: 200px;
+}
